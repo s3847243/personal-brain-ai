@@ -29,7 +29,7 @@ import software.amazon.awssdk.services.s3.presigner.model.PresignedGetObjectRequ
 public class S3Storage implements ObjectStorage {
     @Value("${aws.s3.bucket}")          private String bucket;
     @Value("${aws.s3.signed-url-ttl}")  private int signedUrlTtl;
-    // add s3 aws creds from jobpilot
+    
     private final S3Client s3 = S3Client.builder()
             .credentialsProvider(DefaultCredentialsProvider.create())    // env vars / ~/.aws/credentials
             .region(Region.of(System.getenv().getOrDefault("AWS_REGION", "ap-southeast-2")))
