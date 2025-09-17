@@ -106,6 +106,7 @@ cp .env.example .env.local
 # Run dev server
 npm run dev
 ```
+---
 ### Deployment
 
 PersonalBrain.AI is deployed using Render and AWS services:
@@ -117,7 +118,7 @@ PersonalBrain.AI is deployed using Render and AWS services:
 - AWS S3 → Stores uploaded documents securely.  
 - Pinecone → Stores and retrieves semantic embeddings.  
 - OpenAI APIs → Embeddings (text-embedding-small) and chat (gpt-3.5-turbo).  
-
+---
 ### License
 
 This project is licensed under the MIT License – see the LICENSE file for details.
