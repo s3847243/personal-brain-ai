@@ -103,7 +103,7 @@ export function AppSidebar({ chatSessions , onDeleteSession}: { chatSessions: Ch
                 <SidebarMenuItem key={item.id}>
                   <SidebarMenuButton asChild>
                     <a 
-                      href={`http://localhost:3000/chat/${item.id}`} 
+                      href={`/chat/${item.id}`} 
                       className="flex items-center gap-2 hover:bg-accent hover:text-accent-foreground transition-colors duration-200 rounded-md"
                     >
                       <Edit />

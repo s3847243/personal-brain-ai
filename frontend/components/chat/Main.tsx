@@ -90,7 +90,7 @@ const Main = () => {
   const loadExistingChat = useCallback(async (chatId: string) => {
     try {
       setIsLoading(true);
-      const response = await fetch(`http://localhost:8080/api/chat/${chatId}/messages`, {
+      const response = await fetch(`/api/chat/${chatId}/messages`, {
         method: 'GET',
         "credentials": "include",
         headers: {
@@ -121,7 +121,7 @@ const Main = () => {
   const startNewChat = async (title: string) => {
     try {
       setIsCreatingChat(true);
-      const response = await fetch('http://localhost:8080/api/chat/start', {
+      const response = await fetch('/api/chat/start', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ const Main = () => {
 
 
     const es = new EventSource( 
-      `http://localhost:8080/api/query/ask?sessionId=${chatId}&q=${encodeURIComponent(question)}`, 
+      `/api/query/ask?sessionId=${chatId}&q=${encodeURIComponent(question)}`, 
       { withCredentials: true } as EventSourceInit  
     );
     streamRef.current = es;
